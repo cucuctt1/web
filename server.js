@@ -7,6 +7,7 @@ app.use(express.static(path.join(__dirname, 'uploads'))); // configure express t
 
 // Require the upload middleware
 const upload = require('./upload');
+app.get('/',(req,res)=>{res.redirect('/upload')})
 app.get('/upload',(req,res)=>{
   res.render("index")
 })
